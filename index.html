@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    /* Hide button on desktop */
+#btn {
+    display: none;
+}
+
+/* Show button on mobile */
+@media (max-width: 600px) {
+    #btn {
+        display: block;
+    }
+}
+    .div {
+
+        background-color: burlywood;
+        width: 200px;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .ul {
+
+        display: none;
+    }
+
+    .ul.open {
+
+        display: block;
+    }
+</style>
+<body>
+    <div class="div">
+<button id="btn">☰</button>    
+<ul id="ul" class="ul"><li>Home</li>
+    <li>Services</li>
+    <li>Contact</li></ul>
+    
+    </div>
+
+    <script>
+
+        const btn = document.getElementById("btn")
+        const ul = document.getElementById("ul")
+
+        btn.addEventListener("click", function(){
+
+            ul.classList.toggle("open")
+        })
+    </script>
+</body>
+</html>
